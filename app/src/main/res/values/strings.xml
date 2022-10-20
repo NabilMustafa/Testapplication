@@ -1,4 +1,4 @@
 <resources>
     <string name="app_name">Testapplication</string>
-    <string name="btnhello">Hello</string>
+    <string name="btnhello">Helloworld</string>
 </resources>
