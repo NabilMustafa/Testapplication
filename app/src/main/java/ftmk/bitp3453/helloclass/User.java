@@ -8,7 +8,10 @@ public class User {
     String birthdate;
     String gender;
 
-public String getFullname() {
+    public User(String strFullName, String strPwd, String strAddress, String strEmail, String strBirth, String strGender) {
+    }
+
+    public String getFullname() {
     return fullname;
 }
 

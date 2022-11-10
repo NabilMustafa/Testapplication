@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.DatePickerDialog;
 import android.os.Bundle;
+import android.view.View;
 
 import java.util.Calendar;
 
@@ -51,5 +52,22 @@ public class RegistrationActivity extends AppCompatActivity {
     },year,month,day);
             datePicker.show();
 
+private void fnAddUser(View view){
+    String strFullName = binding.edtFullName.getText().getText().toString();
+    String strPwd = binding.edtEmail.getText().toString();
+    String strEmail = binding.edtEmail.getText().toString();
+    String strBirth = binding.edtBirthdate.getText().toString();
+    String strAddress = binding.edtAddress.getText(.toString();
+    String strGender = "";
 
+    if(binding.rbMale.isChecked())
+        strGender = binding.rbMale.getText().toString();
+    else if(binding.rbFemale.isChecked())
+        strGender = binding.rbFemale.getText().toString();
+
+    User user = new User(strFullName,strPwd,strAddress,strEmail,strBirth,strGender);
+
+    Intent intent = Intent(this,SecondActivity.class);
+    intent.putExtra("objUser",user);
+}
 }
