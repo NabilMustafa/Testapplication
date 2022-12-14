@@ -1,5 +1,6 @@
 package ftmk.bitp3453.helloclass;
 
+import androidx.activity.result.ActivityResultLauncher;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -9,12 +10,18 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import ftmk.bitp3453.helloclass.databinding.ActivityFirstBinding;
+
 public class FirstActivity extends AppCompatActivity {
 
 
     TextView txtvwAge;
     EditText edtName,edtYear;
     Button btnClick;
+
+    ActivityFirstBinding binding;
+    ActivityResultLauncher<Intent> launcher;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
